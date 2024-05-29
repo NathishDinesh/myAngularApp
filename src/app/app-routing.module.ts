@@ -7,7 +7,10 @@ const routes: Routes = [
     path:'',component:AppLayoutComponent,
   },
   {
-    path:'currency',loadChildren:()=> import('src/app/master/master.module').then(m=>m.MasterModule)
+    path:'currency-add',loadChildren:()=> import('src/app/master/master.module').then(m=>m.MasterModule)
+  },
+  {
+    path:'currency-list',loadChildren:()=>import('src/app/setup/setup.module').then(m=>m.SetupModule)
   }
 ];
 

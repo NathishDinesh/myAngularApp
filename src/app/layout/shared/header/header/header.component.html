@@ -8,10 +8,19 @@
           <a class="nav-link">About</a>
         </li>
         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarSetupDropdown"
+          role="button" aria-expanded="false" data-bs-toggle="dropdown">Setup</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarSetupDropdown">
+            <li ><a class="dropdown-item" routerLink="/currency-list">Curreny Master Listing</a></li>
+            <li ><a class="dropdown-item" href="#">Holiday Master Listing</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
           role="button" aria-expanded="false" data-bs-toggle="dropdown">Master</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" routerLink="/currency">Currency Master</a></li>
+          <li><a class="dropdown-item" routerLink="/currency-add">Currency Master</a></li>
           <li><a class="dropdown-item" href="#">Holiday Master</a></li>
           </ul>
         </li>
