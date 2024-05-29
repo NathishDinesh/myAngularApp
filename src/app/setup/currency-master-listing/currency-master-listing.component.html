@@ -1,1 +1,16 @@
-<p>currency-master-listing works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Currency Name</th>
+            <th>Currency Code</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let currencyList of currencies">
+            <td>{{currencyList.currencyName}}</td>
+            <td>{{currencyList.currencyCode}}</td>
+            <td>{{currencyList.date}}</td>
+        </tr>
+    </tbody>
+</table>

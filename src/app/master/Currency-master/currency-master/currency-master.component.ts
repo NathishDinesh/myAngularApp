@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MasterService } from '../../master.service';
 
 @Component({
   selector: 'app-currency-master',
@@ -13,12 +14,19 @@ export class CurrencyMasterComponent implements OnInit {
     date: new FormControl('', [Validators.required])
   })
 
-  constructor() { }
+  constructor(private masterService:MasterService) { }
 
   ngOnInit(): void {
   }
   formName(name: any): FormArray {
     return this.masterForm.controls[name] as FormArray;
+  }
+
+  onSave(){
+    if(this.masterForm.valid){
+      this.masterService.addcurrencyMaster(this.masterForm.value);
+      this.masterForm.reset();
+    }
   }
 
 }

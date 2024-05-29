@@ -33,7 +33,7 @@
         </form>
     </div>
     <div class="card-footer">
-        <button type="button" class="btn btn-primary me-2" [disabled]="!masterForm.valid">Save</button>
+        <button type="button" class="btn btn-primary me-2" [disabled]="!masterForm.valid" (click)="onSave()">Save</button>
         <button type="button" class="btn btn-primary">Cancel</button>
     </div>
 </div>
